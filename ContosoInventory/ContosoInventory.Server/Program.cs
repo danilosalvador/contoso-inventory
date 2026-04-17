@@ -7,8 +7,10 @@ using ContosoInventory.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // 1. Controllers
 builder.Services.AddControllers();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 // 2. Swagger
 builder.Services.AddEndpointsApiExplorer();
